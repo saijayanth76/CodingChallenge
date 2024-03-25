@@ -47,3 +47,31 @@ create table Orders(
     foreign key (productId) references Product(productId)
     
 );
+
+INSERT INTO User (userId, username, password, role)
+VALUES
+(1, 'admin_user', 'admin@123', 'Admin'),
+(2, 'john_doe', 'password123', 'User'),
+(3, 'jane_smith', 'pass456', 'User'),
+(4, 'test_user', 'testpass', 'User'),
+(5, 'demo_user', 'demopass', 'User');
+
+INSERT INTO Product (productId, productName, description, price, quantityStock, type)
+VALUES
+(1, 'Laptop', 'High-performance laptop with SSD storage', 1200.00, 10, 'Electronics'),
+(2, 'T-shirt', 'Cotton t-shirt for everyday wear', 25.00, 50, 'Clothing'),
+(3, 'Smartphone', 'Latest smartphone with dual camera', 800.00, 15, 'Electronics'),
+(4, 'Jeans', 'Slim-fit jeans for men', 45.00, 30, 'Clothing'),
+(5, 'Headphones', 'Wireless headphones with noise cancellation', 150.00, 20, 'Electronics');
+
+INSERT INTO Electronics (productId, brand, warrantyPeriod)
+VALUES
+(1, 'Dell', 24),
+(3, 'Apple', 12),
+(5, 'Sony', 18);
+
+INSERT INTO Clothing (productId, size, color)
+VALUES
+(2, 'M', 'Blue'),
+(4, 'L', 'Black');
+
